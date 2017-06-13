@@ -76,7 +76,11 @@ public class MainActivity extends AppCompatActivity {
             int rgbred= (int) red;
             int rgbgreen= (int) green;
             int rgbblue= (int) blue;
-
+            char crgbred= (char) rgbred;
+            char crgbgreen= (char) green;
+            char crgbblue= (char) blue;
+            int idistanza= (int) distanza;
+            char cdistanza= (char) distanza;
             //EditText mEditSSID= (EditText) findViewById(R.id.nameSsid);
             //String ssid=mEditSSID.getText().toString();
 
@@ -99,12 +103,9 @@ public class MainActivity extends AppCompatActivity {
 
             Socket s = new Socket(ip, porta);
 
-// Initialize output stream to write message to the socket stream
+            // Initialize output stream to write message to the socket stream
+
             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(s.getOutputStream()));
-
-            String outMsg = "";
-
-            outMsg = "" + rgbred + "-" + rgbgreen + "-" + rgbblue + "-" + distanza + "";
 
             Context context = getApplicationContext();
             CharSequence text = "Inviato";
@@ -114,18 +115,20 @@ public class MainActivity extends AppCompatActivity {
             toast.show();
 
 // Write message to stream
-            out.write(outMsg);
-
+            out.write(crgbred);
 // Flush the data from the stream to indicate end of message
             out.flush();
-
+            out.write(crgbgreen);
+            out.flush();
+            out.write(crgbblue);
+            out.flush();
+            out.write(cdistanza);
+            out.flush();
 // Close the output stream
             out.close();
-
 // Close the socket connection
             s.close();
         }
-
         catch(Exception ex){
         // Handle exceptions
         }

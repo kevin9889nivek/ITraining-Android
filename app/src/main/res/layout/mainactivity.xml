@@ -7,28 +7,15 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp">
 
-    <TextView
-    android:id="@+id/textView1"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Indirizzo ip :"
-    android:layout_marginTop="20dp"
-    android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"/>
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/name"
-        android:text="Porta :"
+        android:text="Tocchi :"
         android:textAppearance="?android:attr/textAppearanceLarge" />
     <EditText
-        android:id="@+id/name2"
+        android:id="@+id/editTocchi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
@@ -38,7 +25,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/name2"
+        android:layout_below="@+id/editTocchi"
         android:text="Colori LED :"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 

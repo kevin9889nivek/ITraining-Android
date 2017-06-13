@@ -38,15 +38,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainactivity);
 
-        sharedPreferences = getSharedPreferences("HTTP_HELPER_PREFS", Context.MODE_PRIVATE);
-        editor = sharedPreferences.edit();
-
-        editTextIPAddress = (EditText)findViewById(R.id.name);
-        editTextPortNumber = (EditText)findViewById(R.id.name2);
-
-
-        editTextIPAddress.setText(sharedPreferences.getString(PREF_IP,""));
-        editTextPortNumber.setText(sharedPreferences.getString(PREF_PORT,""));
     }
 
 
@@ -55,11 +46,11 @@ public class MainActivity extends AppCompatActivity {
 
         try{
 // Creating new socket connection to the IP (first parameter) and its opened port (second parameter)
-            EditText mEditIp= (EditText) findViewById(R.id.name);
-            String ip=mEditIp.getText().toString();
+            EditText mEditTocchi= (EditText) findViewById(R.id.editTocchi);
+            int tocchi=Integer.parseInt(mEditTocchi.getText().toString());
 
-            EditText mEditPorta= (EditText) findViewById(R.id.name2);
-            int porta= Integer.parseInt(mEditPorta.getText().toString());
+            //EditText mEditPorta= (EditText) findViewById(R.id.name2);
+            //int porta= Integer.parseInt(mEditPorta.getText().toString());
 
             EditText mEditDistanza= (EditText) findViewById(R.id.TextDistanza);
             float distanza= Float.parseFloat(mEditDistanza.getText().toString());
@@ -88,20 +79,20 @@ public class MainActivity extends AppCompatActivity {
             //String password=mEditPassword.getText().toString();
 
             // get the pin number
-            String parameterValue = "";
+            //String parameterValue = "";
             // get the ip address
-            String ipAddress = editTextIPAddress.getText().toString().trim();
+            //String ipAddress = editTextIPAddress.getText().toString().trim();
             // get the port number
-            String portNumber = editTextPortNumber.getText().toString().trim();
+            //String portNumber = editTextPortNumber.getText().toString().trim();
 
 
             // save the IP address and port for the next time the app is used
-            editor.putString(PREF_IP,ipAddress); // set the ip address value to save
-            editor.putString(PREF_PORT,portNumber); // set the port number to save
-            editor.commit(); // save the IP and PORT
+            //editor.putString(PREF_IP,ipAddress); // set the ip address value to save
+            //editor.putString(PREF_PORT,portNumber); // set the port number to save
+            //editor.commit(); // save the IP and PORT
 
 
-            Socket s = new Socket(ip, porta);
+            Socket s = new Socket("192.168.4.1", 3000);
 
             // Initialize output stream to write message to the socket stream
 
@@ -123,6 +114,8 @@ public class MainActivity extends AppCompatActivity {
             out.write(crgbblue);
             out.flush();
             out.write(cdistanza);
+            out.flush();
+            out.write(tocchi);
             out.flush();
 // Close the output stream
             out.close();

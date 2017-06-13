@@ -12,6 +12,8 @@ import android.content.SharedPreferences;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
+import com.android.colorpicker.ColorPickerDialog;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -22,6 +24,8 @@ import java.net.Socket;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+import static android.R.attr.numColumns;
+import static android.R.attr.tag;
 
 
 public class MainActivity extends AppCompatActivity {

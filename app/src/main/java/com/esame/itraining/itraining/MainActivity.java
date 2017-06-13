@@ -77,11 +77,11 @@ public class MainActivity extends AppCompatActivity {
             int rgbgreen= (int) green;
             int rgbblue= (int) blue;
 
-            EditText mEditSSID= (EditText) findViewById(R.id.nameSsid);
-            String ssid=mEditSSID.getText().toString();
+            //EditText mEditSSID= (EditText) findViewById(R.id.nameSsid);
+            //String ssid=mEditSSID.getText().toString();
 
-            EditText mEditPassword= (EditText) findViewById(R.id.namePassword);
-            String password=mEditPassword.getText().toString();
+            //EditText mEditPassword= (EditText) findViewById(R.id.namePassword);
+            //String password=mEditPassword.getText().toString();
 
             // get the pin number
             String parameterValue = "";
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
             String outMsg = "";
 
-            outMsg = ssid + password + rgbred + rgbgreen + rgbblue + distanza;
+            outMsg = "" + rgbred + "-" + rgbgreen + "-" + rgbblue + "-" + distanza + "";
 
             Context context = getApplicationContext();
             CharSequence text = "Inviato";

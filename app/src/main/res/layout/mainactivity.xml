@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp">
 
     <TextView
     android:id="@+id/textView1"
@@ -30,37 +35,10 @@
         android:layout_below="@+id/textView2"/>
 
     <TextView
-        android:id="@+id/textViewSsid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/name2"
-        android:text="SSID :"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-    <EditText
-        android:id="@+id/nameSsid"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewSsid"/>
-
-    <TextView
-        android:id="@+id/textViewPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/nameSsid"
-        android:text="Password :"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-    <EditText
-        android:id="@+id/namePassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:layout_below="@+id/textViewPassword"/>
-
-    <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/namePassword"
+        android:layout_below="@+id/name2"
         android:text="Colori LED :"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 

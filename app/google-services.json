@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "4455900466",
+    "firebase_url": "https://itraining-f9832.firebaseio.com",
+    "project_id": "itraining-f9832",
+    "storage_bucket": "itraining-f9832.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:4455900466:android:6d8b706d71b35292",
+        "android_client_info": {
+          "package_name": "com.esame.itraining.itraining"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "4455900466-1gm5mslkgai2rrk63ub3d0thi09shh20.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUULLncGtHnup5PN3gPtkDuiogxjBMTU0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

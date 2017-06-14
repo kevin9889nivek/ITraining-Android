@@ -12,7 +12,7 @@ import android.content.SharedPreferences;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
-import com.android.colorpicker.ColorPickerDialog;
+//import com.android.colorpicker.ColorPickerDialog;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -31,8 +31,8 @@ import static android.R.attr.tag;
 public class MainActivity extends AppCompatActivity {
 
 
-    public final static String PREF_IP = "PREF_IP_ADDRESS";
-    public final static String PREF_PORT = "PREF_PORT_NUMBER";
+    //public final static String PREF_IP = "PREF_IP_ADDRESS";
+    //public final static String PREF_PORT = "PREF_PORT_NUMBER";
     private EditText editTextIPAddress, editTextPortNumber;
     SharedPreferences.Editor editor;
     SharedPreferences sharedPreferences;
@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainactivity);
+
 
     }
 
@@ -128,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
         }
         catch(Exception ex){
         // Handle exceptions
+            //Toast.makeText(this, "Si è verificata un'eccezione", Toast.LENGTH_SHORT).show();
         }
     }
 

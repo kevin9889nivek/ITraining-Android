@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
         }
         catch(Exception ex){
         // Handle exceptions
-            //Toast.makeText(this, "Si è verificata un'eccezione", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Si è verificata un'eccezione", Toast.LENGTH_SHORT).show();
         }
     }
 
